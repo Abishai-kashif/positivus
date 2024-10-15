@@ -35,7 +35,7 @@ function FooterSection() {
                 <div className="hidden md:flex gap-[20px]">
                     {socials.map((social, index) => (
                         <div key={index}>
-                            <img src={social} />
+                            <img src={social} alt="social icon" />
                         </div>
                     ))}
                 </div>
@@ -82,7 +82,7 @@ function FooterSection() {
             <div className="md:hidden flex items-center justify-center gap-[20px] mt-10">
                 {socials.map((social, index) => (
                     <div key={index}>
-                        <img src={social} />
+                        <img src={social} alt="social icon" />
                     </div>
                 ))}
             </div>

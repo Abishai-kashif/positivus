@@ -11,7 +11,8 @@ function ContactUsSection() {
                     Contact Us
                 </h2>
                 <p className="text-[18px] my-[2.6rem] max-w-[323px]">
-                    Connect with Us: Let's Discuss Your Digital Marketing Needs
+                    Connect with Us: Let&apos;s Discuss Your Digital Marketing
+                    Needs
                 </p>
             </div>
 
