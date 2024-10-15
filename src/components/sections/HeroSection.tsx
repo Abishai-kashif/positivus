@@ -4,7 +4,7 @@ import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 function HeroSection() {
     return (
-        <section className="w-full h-auto mt-10">
+        <section className="w-full h-auto mt-10 md:px-[85px] px-4">
             <div className="flex flex-col lg:flex-row justify-evenly gap-x-14 w-full">
                 {/* content */}
                 <div className="lg:w-[50%]">

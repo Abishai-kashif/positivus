@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function FooterSection() {
     return (
-        <section className="bg-secondary md:rounded-t-[45px] p-8 md:p-[55px] flex md:block flex-col justify-center text-center md:text-left">
+        <section className="bg-secondary md:rounded-t-[45px] p-8 md:p-[55px] flex md:block flex-col justify-center text-center md:text-left md:mx-[85px]">
             {/* header */}
             <div className="flex flex-col gap-8 md:flex-row items-center justify-between md:mb-5">
                 <div className="my-5">

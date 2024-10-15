@@ -13,7 +13,7 @@ function OurWorkingProcessSection() {
     };
 
     return (
-        <section>
+        <section className="md:px-[85px] px-4">
             {/* heading */}
             <div className="flex flex-col lg:flex-row items-center lg:gap-[40px] gap-0 text-center lg:text-left">
                 <h2 className="text-secondary bg-primary text-h2 px-[7px] rounded-[7px] font-medium py-0">

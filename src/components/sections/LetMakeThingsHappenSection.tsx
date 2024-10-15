@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function LetMakeThingsHappenSection() {
     return (
-        <section>
+        <section className="md:px-[85px] px-4">
             <div className="bg-accent rounded-[45px] p-[50px] md:p-[60px] relative">
                 <div className="flex justify-between items-center gap-10">
                     {/* content */}

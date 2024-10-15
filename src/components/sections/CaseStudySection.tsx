@@ -5,7 +5,7 @@ import { Separator } from "../ui/separator";
 import { Card, Carousel } from "../ui/apple-cards-caraousal";
 export default function CaseStudySection() {
     return (
-        <section>
+        <section className="md:px-[85px]">
             <div className="flex flex-col lg:flex-row lg:gap-[40px] items-center gap-0">
                 <h2 className="text-secondary bg-primary text-h2 px-[7px] rounded-[7px] font-medium py-0 text-center">
                     Case Studies

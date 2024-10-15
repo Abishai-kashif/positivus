@@ -15,7 +15,7 @@ export default function Home() {
     return (
         <main className="overflow-x-hidden">
             <NavBar />
-            <div className=" md:mx-[85px] lg:pt-[20px] pt-12 flex flex-col gap-[80px]  mx-4">
+            <div className="lg:pt-[20px] pt-12 flex flex-col gap-[80px]">
                 <HeroSection />
                 <LogoGroupSection />
                 <ServiceSection />
