@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import WorkingProcessCard from "../cards/WorkingProcessCard";
 import { Accordion } from "../ui/accordion";
 import { processes } from "@/data";
+import TranslateAnimationEffect from "../TranslateAnimationEffect";
 
 function OurWorkingProcessSection() {
     const [value, setValue] = useState("");
@@ -36,12 +37,19 @@ function OurWorkingProcessSection() {
                     className="w-full"
                     onValueChange={handleAccordionChange}
                 >
-                    {processes.map((process, index) => (
-                        <WorkingProcessCard
-                            {...process}
-                            currentValue={value}
-                            key={index}
-                        />
+                    {processes.map((process, idx) => (
+                        <TranslateAnimationEffect
+                            delay={0.1 * idx}
+                            translateAmount={(idx + 1) % 2 === 0 ? -400 : 400}
+                            direction={"x"}
+                            key={idx}
+                        >
+                            <WorkingProcessCard
+                                {...process}
+                                currentValue={value}
+                                key={idx}
+                            />
+                        </TranslateAnimationEffect>
                     ))}
                 </Accordion>
             </div>

@@ -108,18 +108,18 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                             <motion.div
                                 initial={{
                                     opacity: 0,
-                                    y: 20,
+                                    x: 40,
                                 }}
-                                animate={{
+                                whileInView={{
                                     opacity: 1,
-                                    y: 0,
+                                    x: 0,
                                     transition: {
-                                        duration: 0.5,
+                                        duration: 0.7,
                                         delay: 0.2 * index,
                                         ease: "easeOut",
-                                        once: true,
                                     },
                                 }}
+                                viewport={{ once: true }}
                                 key={"card" + index}
                                 className="last:pr-[2%]  rounded-3xl"
                             >

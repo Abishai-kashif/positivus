@@ -9,7 +9,7 @@ interface IProps {
 
 function TeamCard({ name, position, experience, image }: IProps) {
     return (
-        <div className="rounded-[45px] p-8 md:p-[31px] border border-secondary border-b-[6px] transition-all duration-100 ease-in-out hover:scale-[1.01]">
+        <div className="w-full h-full rounded-[45px] p-8 md:p-[31px] border border-secondary border-b-[6px] transition-all duration-100 ease-in-out hover:scale-[1.01]">
             <div className="flex justify-between">
                 <div className="flex gap-[20px] items-end">
                     <div>

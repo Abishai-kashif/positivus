@@ -1,6 +1,7 @@
 import { teams } from "@/data";
 import TeamCard from "../cards/TeamCard";
 import MainButton from "../common/MainButton";
+import TranslateAnimationEffect from "../TranslateAnimationEffect";
 
 function TeamSection() {
     return (
@@ -18,14 +19,21 @@ function TeamSection() {
 
             {/* team container */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-[40px]">
-                {teams.map((team, index) => (
-                    <TeamCard
-                        key={index}
-                        name={team.name}
-                        position={team.position}
-                        experience={team.experience}
-                        image={team.image}
-                    />
+                {teams.map((team, idx) => (
+                    <TranslateAnimationEffect
+                        delay={idx * 0.1}
+                        translateAmount={400}
+                        direction={(idx + 1) % 2 === 0 ? "x" : "y"}
+                        key={idx}
+                    >
+                        <TeamCard
+                            key={idx}
+                            name={team.name}
+                            position={team.position}
+                            experience={team.experience}
+                            image={team.image}
+                        />
+                    </TranslateAnimationEffect>
                 ))}
             </div>
 
