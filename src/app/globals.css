@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.apple-class {
+    background-color: aquamarine;
+    color: purple;
+}

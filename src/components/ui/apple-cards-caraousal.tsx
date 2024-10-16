@@ -3,7 +3,6 @@ import React, { useEffect, useState, createContext } from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
-// import { useOutsideClick } from "@/hooks/use-outside-click";
 import Link from "next/link";
 
 interface CarouselProps {
@@ -41,6 +40,15 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         }
     };
 
+    const setScrollability = () => {
+        const carousel = document.querySelector(
+            "#scroll-indicator"
+        ) as HTMLElement;
+        if (carousel?.style) {
+            carousel.style.display = "none";
+        }
+    };
+
     const handleCardClose = (index: number) => {
         if (carouselRef.current) {
             const cardWidth = isMobile() ? 530 : 384; // (md:w-96)
@@ -67,7 +75,29 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                     className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none]"
                     ref={carouselRef}
                     onScroll={checkScrollability}
+                    onScrollCapture={setScrollability}
                 >
+                    <motion.div
+                        id="scroll-indicator"
+                        className="absolute right-[8rem] top-24 z-[999] opacity-0 text-4xl text-white/[0.5] text-center"
+                        whileInView={{
+                            opacity: 1,
+                            x: 10,
+                            y: [0, -1.5, 0],
+                            scale: 1.3,
+                        }}
+                        transition={{
+                            delay: 2,
+                            duration: 1.5,
+                            ease: "easeOut",
+                            repeat: Infinity,
+                            repeatType: "loop",
+                        }}
+                    >
+                        {/* double arrow */}
+                        &raquo;
+                    </motion.div>
+
                     <div
                         className={cn(
                             "flex flex-row justify-start gap-4 pl-3",
