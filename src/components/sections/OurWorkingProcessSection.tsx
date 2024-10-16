@@ -40,14 +40,14 @@ function OurWorkingProcessSection() {
                     {processes.map((process, idx) => (
                         <TranslateAnimationEffect
                             delay={0.1 * idx}
-                            translateAmount={(idx + 1) % 2 === 0 ? -400 : 400}
+                            translateAmount={(idx + 1) % 2 === 0 ? -200 : 200}
                             direction={"x"}
-                            // key={idx}
+                            key={idx}
                         >
                             <WorkingProcessCard
                                 {...process}
                                 currentValue={value}
-                                key={idx}
+                                // key={idx}
                             />
                         </TranslateAnimationEffect>
                     ))}

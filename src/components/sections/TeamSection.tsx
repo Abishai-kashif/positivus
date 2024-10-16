@@ -24,10 +24,10 @@ function TeamSection() {
                         delay={idx * 0.1}
                         translateAmount={400}
                         direction={(idx + 1) % 2 === 0 ? "x" : "y"}
-                        // key={idx}
+                        key={idx}
                     >
                         <TeamCard
-                            key={idx}
+                            // key={idx}
                             name={team.name}
                             position={team.position}
                             experience={team.experience}
