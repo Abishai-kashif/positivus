@@ -77,27 +77,6 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                     onScroll={checkScrollability}
                     onScrollCapture={setScrollability}
                 >
-                    <motion.div
-                        id="scroll-indicator"
-                        className="absolute right-[8rem] top-24 z-[999] opacity-0 text-4xl text-white/[0.5] text-center"
-                        whileInView={{
-                            opacity: 1,
-                            x: 10,
-                            y: [0, -1.5, 0],
-                            scale: 1.3,
-                        }}
-                        transition={{
-                            delay: 2,
-                            duration: 1.5,
-                            ease: "easeOut",
-                            repeat: Infinity,
-                            repeatType: "loop",
-                        }}
-                    >
-                        {/* double arrow */}
-                        &raquo;
-                    </motion.div>
-
                     <div
                         className={cn(
                             "flex flex-row justify-start gap-4 pl-3",
@@ -121,9 +100,31 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                                 }}
                                 viewport={{ once: true }}
                                 key={"card" + index}
-                                className="last:pr-[2%]  rounded-3xl"
+                                className="relative last:pr-[2%]  rounded-3xl"
                             >
                                 {item}
+                                {index === 0 && (
+                                    <motion.div
+                                        id="scroll-indicator"
+                                        className="absolute bottom-[5rem] right-5 z-[999] opacity-0 text-[4rem] bg-gradient-to-r from-slate-900 to-slate-500 bg-clip-text text-transparent text-center"
+                                        whileInView={{
+                                            opacity: 1,
+                                            x: 10,
+                                            y: [0, -1.5, 0],
+                                            scale: 1.3,
+                                        }}
+                                        transition={{
+                                            delay: 2,
+                                            duration: 1.5,
+                                            ease: "easeOut",
+                                            repeat: Infinity,
+                                            repeatType: "loop",
+                                        }}
+                                    >
+                                        {/* double arrow */}
+                                        &raquo;
+                                    </motion.div>
+                                )}
                             </motion.div>
                         ))}
                     </div>
