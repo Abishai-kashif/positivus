@@ -42,12 +42,12 @@ function OurWorkingProcessSection() {
                             delay={0.1 * idx}
                             translateAmount={(idx + 1) % 2 === 0 ? -400 : 400}
                             direction={"x"}
-                            key={idx}
+                            // key={idx}
                         >
                             <WorkingProcessCard
                                 {...process}
                                 currentValue={value}
-                                // key={idx}
+                                key={idx}
                             />
                         </TranslateAnimationEffect>
                     ))}
