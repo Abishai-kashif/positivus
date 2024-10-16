@@ -27,7 +27,7 @@ function TeamSection() {
                         key={idx}
                     >
                         <TeamCard
-                            key={idx}
+                            // key={idx}
                             name={team.name}
                             position={team.position}
                             experience={team.experience}

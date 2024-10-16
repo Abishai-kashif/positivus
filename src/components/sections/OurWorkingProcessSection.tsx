@@ -47,7 +47,7 @@ function OurWorkingProcessSection() {
                             <WorkingProcessCard
                                 {...process}
                                 currentValue={value}
-                                key={idx}
+                                // key={idx}
                             />
                         </TranslateAnimationEffect>
                     ))}
